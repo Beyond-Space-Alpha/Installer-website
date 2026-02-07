@@ -13,8 +13,10 @@ const Navbar = () => {
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl">
       <nav className="container mx-auto flex h-16 items-center justify-between px-6">
         <Link to="/" className="flex items-center gap-2.5">
-          <div className="h-7 w-7 rounded-md bg-primary/20 border border-primary/30 flex items-center justify-center">
-            <div className="h-2 w-2 rounded-full bg-primary" />
+          <div className="h-8 w-8 rounded-lg bg-primary/10 border border-primary/25 flex items-center justify-center">
+            <span className="text-primary text-xl italic font-serif leading-none select-none" style={{ fontFamily: "'Georgia', 'Times New Roman', serif", fontStyle: 'italic' }}>
+              I
+            </span>
           </div>
           <span className="font-mono text-sm font-semibold tracking-wide text-foreground">
             ImpulseLabs
