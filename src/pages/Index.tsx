@@ -2,6 +2,7 @@ import { Monitor, Apple, Terminal } from "lucide-react";
 import Layout from "@/components/Layout";
 import FeatureCard from "@/components/FeatureCard";
 import PhilosophySection from "@/components/PhilosophySection";
+import HeroSurface from "@/components/HeroSurface";
 
 const downloadButtons = [
   { label: "Download for Windows", icon: Monitor },
@@ -40,8 +41,13 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="relative bg-glow">
-        <div className="container mx-auto px-6 py-32 md:py-44">
+      <section className="relative overflow-hidden min-h-[85vh] flex items-center">
+        {/* 3D Surface */}
+        <HeroSurface />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/40 pointer-events-none" />
+
+        <div className="relative container mx-auto px-6 py-32 md:py-44 lg:py-52">
           <div className="max-w-3xl">
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary mb-6">
               Open-Source Propulsion Design
@@ -58,7 +64,7 @@ const Index = () => {
               {downloadButtons.map(({ label, icon: Icon }) => (
                 <button
                   key={label}
-                  className="inline-flex items-center gap-2.5 rounded-lg border border-primary/30 bg-primary/10 px-5 py-3 font-mono text-sm font-medium text-primary transition-all hover:bg-primary/20 hover:border-primary/50 glow-sm"
+                  className="inline-flex items-center gap-2.5 rounded-lg border border-primary/30 bg-primary/10 px-5 py-3 font-mono text-sm font-medium text-primary transition-all hover:bg-primary/20 hover:border-primary/50 glow-sm backdrop-blur-sm"
                   onClick={() => {}}
                 >
                   <Icon className="h-4 w-4" />
